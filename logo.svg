@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">yepmath logo</title>
+  <desc id="desc">A hand-drawn checkmark and underline inside a circle.</desc>
+  <rect width="512" height="512" rx="112" fill="#f4f3ed"/>
+  <circle cx="256" cy="256" r="178" fill="none" stroke="#2e6253" stroke-width="24"/>
+  <path d="M157 248l66 68 132-145" fill="none" stroke="#2e6253" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M151 361c71 18 147 18 228-3" fill="none" stroke="#3f6f85" stroke-width="18" stroke-linecap="round"/>
+</svg>

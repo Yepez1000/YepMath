@@ -30,9 +30,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-
 .navbar.nav-hidden { transform: translateY(-110%); }
 .nav-inner { width: var(--shell); height: 48px; margin: auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .brand { display: inline-flex; align-items: center; gap: 11px; width: max-content; font-size: 16px; font-weight: 800; letter-spacing: -.03em; }
-.brand-mark { width: 28px; height: 28px; position: relative; border: 1.5px solid var(--green); border-radius: 50%; display: inline-block; }
-.brand-mark span:first-child { position: absolute; width: 12px; height: 7px; top: 8px; left: 7px; border-left: 1.6px solid var(--green); border-bottom: 1.6px solid var(--green); transform: rotate(-45deg); }
-.brand-mark span:last-child { position: absolute; width: 16px; height: 1.5px; left: 5px; bottom: 5px; background: var(--green); transform: rotate(-8deg); border-radius: 10px; }
+.brand-mark { width: 30px; height: 30px; display: block; flex: 0 0 30px; }
 .desktop-nav { display: flex; gap: 36px; font-size: 13px; font-weight: 600; color: var(--graphite-soft); }
 .desktop-nav a { position: relative; }
 .desktop-nav a::after { content: ""; position: absolute; height: 1px; left: 0; right: 100%; bottom: -6px; background: var(--green); transition: right .25s ease; }
@@ -193,8 +191,6 @@ h2 { margin: 0; font-size: clamp(42px, 5vw, 70px); line-height: 1.06; letter-spa
 
 footer { min-height: 110px; padding: 0 max(24px, calc((100vw - 1180px)/2)); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; background: #172f29; color: rgba(239,244,239,.66); font-size: 10px; }
 footer .brand { color: var(--chalk); font-size: 14px; }
-footer .brand-mark { border-color: #9ec1b5; }
-footer .brand-mark span { border-color: #9ec1b5 !important; background: #9ec1b5 !important; }
 footer p { margin: 0; }
 footer > span { justify-self: end; }
 

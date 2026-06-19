@@ -1,4 +1,4 @@
-const brandName = "ClearMath";
+const brandName = "yepmath";
 const calBookingAttributes = `data-cal-link="edgar-yepez/free-30-minute-math-check-in" data-cal-namespace="free-30-minute-math-check-in" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'`;
 
 function ArrowIcon() {
@@ -63,7 +63,7 @@ function Navbar() {
     <header class="navbar" data-nav>
       <div class="nav-inner">
         <a class="brand" href="#top" aria-label="${brandName} home">
-          <span class="brand-mark"><span></span><span></span></span>
+          <img class="brand-mark" src="logo.svg" alt="" width="30" height="30" />
           <span>${brandName}</span>
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
@@ -159,19 +159,19 @@ function Subjects() {
 const pricingPlans = [
   {
     name: "Individual Session",
-    rate: 20,
+    rate: 25,
     sessions: 1,
     note: "A flexible option for one-off questions, test review, or occasional support."
   },
   {
     name: "Summer Starter",
-    rate: 15,
+    rate: 22.5,
     sessions: 4,
     note: "Four focused sessions to strengthen a topic and build momentum before school."
   },
   {
     name: "Summer Reset",
-    rate: 10,
+    rate: 20,
     sessions: 8,
     note: "Eight sessions for rebuilding foundations and creating a steady summer routine."
   }
@@ -199,7 +199,7 @@ function Pricing() {
             <article class="price-card reveal" style="--index:${index}">
               <div class="price-card-top"><span>0${index + 1}</span><p>${plan.sessions === 1 ? "Pay as you go" : `${plan.sessions}-session plan`}</p></div>
               <h3>${plan.name}</h3>
-              <div class="rate"><sup>$</sup><strong>${plan.rate}</strong><span>/ hour</span></div>
+              <div class="rate"><sup>$</sup><strong>${Number.isInteger(plan.rate) ? plan.rate : plan.rate.toFixed(2)}</strong><span>/ hour</span></div>
               <p>${plan.note}</p>
               <div class="price-summary">
                 <span>${plan.sessions} × 1-hour ${plan.sessions === 1 ? "session" : "sessions"}</span>
@@ -245,7 +245,7 @@ function FinalCTA() {
 }
 
 function Footer() {
-  return `<footer><a class="brand" href="#top"><span class="brand-mark"><span></span><span></span></span><span>${brandName}</span></a><p>Patient teaching. Clearer thinking.</p><span>© ${new Date().getFullYear()} ${brandName} Tutoring</span></footer>`;
+  return `<footer><a class="brand" href="#top"><img class="brand-mark" src="logo.svg" alt="" width="30" height="30" /><span>${brandName}</span></a><p>Patient teaching. Clearer thinking.</p><span>© ${new Date().getFullYear()} ${brandName} Tutoring</span></footer>`;
 }
 
 document.querySelector("#app").innerHTML = Navbar() + Hero() + AnimatedProblemCard() + Subjects() + Pricing() + HowItWorks() + FinalCTA() + Footer();

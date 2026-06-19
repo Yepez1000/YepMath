@@ -1,1 +1,1 @@
-# YepMath
+# yepmath
