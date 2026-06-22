@@ -72,7 +72,7 @@ function Navbar() {
           <a href="#pricing">Pricing</a>
           <a href="#results">Results</a>
         </nav>
-        <a class="button button-small nav-cta" href="#book" ${calBookingAttributes}>Book free meeting ${ArrowIcon()}</a>
+        <a class="button button-small nav-cta" href="#book" ${calBookingAttributes}>Book free check-in ${ArrowIcon()}</a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <span></span><span></span>
         </button>
@@ -80,7 +80,7 @@ function Navbar() {
       <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
         <a href="#subjects">Subjects</a><a href="#how-it-works">How it works</a>
         <a href="#pricing">Pricing</a><a href="#results">Results</a>
-        <a class="button" href="#book" ${calBookingAttributes}>Book free meeting ${ArrowIcon()}</a>
+        <a class="button" href="#book" ${calBookingAttributes}>Book free check-in ${ArrowIcon()}</a>
       </nav>
     </header>`;
 }
@@ -92,13 +92,13 @@ function Hero() {
         ${MathWritingBackground()}
         <div class="hero-content reveal">
           <div class="eyebrow"><span class="status-dot"></span> Math tutoring for RGV students this summer</div>
-          <h1>Book your first math<br /><span class="headline-mark">meeting free</span> today.</h1>
+          <h1>Book your free math<br /><span class="headline-mark">check-in</span> today.</h1>
           <p class="hero-subtitle">Personalized math and Python tutoring built around how you actually think — so you can return to school with a clearer foundation.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#book" ${calBookingAttributes}>Book free meeting ${ArrowIcon()}</a>
+            <a class="button button-primary" href="#book" ${calBookingAttributes}>Book free check-in ${ArrowIcon()}</a>
             <a class="text-link" href="#how-it-works">See how it works <span>↓</span></a>
           </div>
-          <div class="trust-line"><span>Free 30-minute check-in</span><i></i><span>In-person across the RGV this summer</span><i></i><span>Online after August</span></div>
+          <div class="trust-line"><span>Free 30-minute check-in</span><i></i><span>First tutoring session free</span><i></i><span>Continue only if it helps</span></div>
         </div>
         <div class="scroll-cue" aria-hidden="true"><span>Scroll to solve</span><i></i></div>
       </section>`;
@@ -159,21 +159,21 @@ function Subjects() {
 const pricingPlans = [
   {
     name: "Individual Session",
-    rate: 25,
+    rate: 15,
     sessions: 1,
-    note: "A flexible option for one-off questions, test review, or occasional support."
+    note: "A low-cost option for one-off questions, test review, or occasional support."
   },
   {
-    name: "Summer Starter",
-    rate: 22.5,
+    name: "Best-Value Starter",
+    rate: 12.5,
     sessions: 4,
-    note: "Four focused sessions to strengthen a topic and build momentum before school."
+    note: "Four focused sessions priced to make getting help an easy yes."
   },
   {
-    name: "Summer Reset",
-    rate: 20,
+    name: "Can’t-Miss Deal",
+    rate: 10,
     sessions: 8,
-    note: "Eight sessions for rebuilding foundations and creating a steady summer routine."
+    note: "Eight sessions for steady support at the cheapest hourly rate."
   }
 ];
 
@@ -182,14 +182,14 @@ function Pricing() {
     <section class="pricing-section section" id="pricing">
       <div class="section-shell">
         <div class="pricing-heading reveal">
-          <div><p class="section-kicker">Simple, transparent pricing</p><h2>Start free.<br />Choose what fits.</h2></div>
-          <p>No contracts, surprise fees, or pressure to decide upfront. We’ll use the first meeting to understand what would actually help.</p>
+          <div><p class="section-kicker">Simple, transparent pricing</p><h2>Start free.<br />Stay for a deal.</h2></div>
+          <p>No contracts, surprise fees, or pressure to decide upfront. After the free check-in and first session, paid tutoring is priced low enough to just cover the basics.</p>
         </div>
 
         <article class="checkin-card reveal">
           <div class="checkin-number">30<span>min</span></div>
-          <div class="checkin-copy"><p>Always the first step</p><h3>Free math check-in</h3><span>Meet, work through one concern, and decide whether tutoring feels like a good fit.</span></div>
-          <div class="checkin-meta"><span>No charge</span><span>No obligation</span><span>Online or in-person</span></div>
+          <div class="checkin-copy"><p>Always the first step</p><h3>Free 30-minute check-in</h3><span>We talk about your class, your goals, and what currently feels confusing.</span></div>
+          <div class="checkin-meta"><span>Check-in is free</span><span>First session is free</span><span>No obligation</span></div>
           <a class="button button-primary" href="#book" ${calBookingAttributes}>Book free check-in ${ArrowIcon()}</a>
         </article>
 
@@ -207,21 +207,22 @@ function Pricing() {
               </div>
             </article>`).join("")}
         </div>
-        <div class="pricing-footnote reveal"><span>All prices shown in USD.</span><span>Choose or change your plan after the free check-in.</span><span>In-person in the RGV this summer · Online after August.</span></div>
+        <div class="pricing-footnote reveal"><span>All prices shown in USD.</span><span>Paid tutoring begins only after your free tutoring session.</span><span>Priced for a meal, gas, and getting to your home.</span><span>In-person in the RGV this summer · Online after August.</span></div>
       </div>
     </section>`;
 }
 
 function HowItWorks() {
   const steps = [
-    ["01", "Book a free first meeting", "Tell us what you’re working on and choose a time that fits."],
-    ["02", "Find what’s actually confusing", "We listen, ask a few good questions, and locate the real sticking point."],
-    ["03", "Build a plan together", "Leave with clearer thinking, next steps, and a plan made for you."]
+    ["01", "Book a free 30-minute check-in", "We talk about your class, your goals, and what currently feels confusing."],
+    ["02", "Get a simple plan", "I prepare a first tutoring session around the concepts and problems you need help with."],
+    ["03", "Try one free tutoring session", "We work through real problems together so you can see whether the tutoring style helps."],
+    ["04", "Continue only if it’s useful", "After the free session, choose individual tutoring or a small package—without a contract or pressure."]
   ];
   return `
     <section class="how-section section" id="how-it-works">
       <div class="section-shell">
-        <div class="how-intro reveal"><p class="section-kicker">How it works</p><h2>Three steps.<br /><span>Zero pressure.</span></h2><p>The first meeting is a conversation, not a commitment. We’ll make one hard thing feel easier and see if we’re a good fit.</p></div>
+        <div class="how-intro reveal"><p class="section-kicker">How it works</p><h2>Four steps.<br /><span>Zero pressure.</span></h2><p>Start with a conversation, then try a real tutoring session for free. You only continue if the experience feels useful.</p></div>
         <div class="steps-list">
           ${steps.map(([num, title, body]) => `<article class="step reveal"><span>${num}</span><h3>${title}</h3><p>${body}</p><i>${ArrowIcon()}</i></article>`).join("")}
         </div>
@@ -235,10 +236,10 @@ function FinalCTA() {
       <div class="cta-scribbles" aria-hidden="true"><span>x = ?</span><span>∫</span><span>✓</span></div>
       <div class="cta-inner reveal">
         <p class="section-kicker">Your next step</p>
-        <h2>Start with one<br /><span>free meeting.</span></h2>
-        <p>Bring a math question, a Python bug, or just the feeling that the problem should make more sense than it does.</p>
-        <a class="button button-light" href="#book" ${calBookingAttributes}>Book free meeting today ${ArrowIcon()}</a>
-        <span class="cta-note">No payment required · In-person in the RGV this summer · Online after August</span>
+        <h2>Start with a free<br /><span>30-minute check-in.</span></h2>
+        <p>Tell me about the class, what you’re working toward, and where things stopped making sense. I’ll listen and prepare a simple first-session plan.</p>
+        <a class="button button-light" href="#book" ${calBookingAttributes}>Book free check-in ${ArrowIcon()}</a>
+        <span class="cta-note">No payment required · Your first tutoring session is free, too</span>
       </div>
     </section>
     </main>`;
